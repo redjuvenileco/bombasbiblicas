@@ -1,6 +1,6 @@
-// Registrar Service Worker
+// Registrar Service Worker con scope raíz
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.register('/sw.js', { scope: '/' });
 }
 
 // Captura el evento beforeinstallprompt
@@ -17,13 +17,12 @@ installBtn.addEventListener('click', async () => {
   deferredPrompt.prompt();
   const { outcome } = await deferredPrompt.userChoice;
   if (outcome === 'accepted') {
-    console.log('App instalada');
     installBtn.style.display = 'none';
   }
   deferredPrompt = null;
 });
 
-// Modo de juego
+// Selección de modo de juego
 document.getElementById('mode-defuser').onclick = () => {
   sessionStorage.setItem('mode', 'defuser');
   location.href = 'game.html';
