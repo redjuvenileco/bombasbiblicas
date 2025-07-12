@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bombas Bíblicas – Juego</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-screen">
+  <div class="panel-header">
+    <div id="led-timer" class="led-container"></div>
+    <div class="status">Errores: <span id="errors">0</span>/3</div>
+  </div>
+  <div id="main-content" class="main-content"></div>
+  <footer>
+    <button id="finish-btn" class="btn" disabled>Desactivar Bomba</button>
+  </footer>
+
+  <audio id="tick" src="sounds/tick.mp3" loop></audio>
+  <audio id="boom" src="sounds/boom.mp3"></audio>
+  <audio id="success" src="sounds/success.mp3"></audio>
+  <audio id="error" src="sounds/error.mp3"></audio>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
