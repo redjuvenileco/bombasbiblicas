@@ -1,10 +1,18 @@
-const CACHE = 'bombas-bib-v3';
+const CACHE = 'bombas-bib-cache-v4';
 const ASSETS = [
-  '/', '/index.html', '/game.html',
-  '/css/style.css', '/js/script.js', '/js/game.js',
-  '/manifest.json',
-  '/sounds/tick.mp3', '/sounds/boom.mp3', '/sounds/success.mp3', '/sounds/error.mp3',
-  '/icons/icon-192.png', '/icons/icon-512.png', '/README.pdf'
+  './',
+  './index.html',
+  './game.html',
+  './css/style.css',
+  './js/script.js',
+  './js/game.js',
+  './manifest.json',
+  './sounds/tick.mp3',
+  './sounds/boom.mp3',
+  './sounds/success.mp3',
+  './sounds/error.mp3',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
 ];
 
 self.addEventListener('install', e =>
